@@ -12,10 +12,10 @@
 
 ### ⋆｡˚ about me
 
-> ♡ &nbsp;Charity Tiongson Ricabo, though you can call me **chacha, chet, chai,** or **rye**
-> ✧ &nbsp;bs computer engineering @ cebu institute of technology – university
-> ✧ &nbsp;software engineer intern @ innodata knowledge services
-> ✧ &nbsp;I specialize in translating user-centered designs into functional, full-stack applications.
+> ♡ &nbsp;Charity Tiongson Ricabo, though you can call me **chacha, chet, chai,** or **rye**<br>
+> ✧ &nbsp;bs computer engineering @ cebu institute of technology – university<br>
+> ✧ &nbsp;software engineer intern @ innodata knowledge services<br>
+> ✧ &nbsp;I specialize in translating user-centered designs into functional, full-stack applications.<br>
 > ✧ &nbsp;Outside of development, I enjoy painting, reading, and photography.
 
 <br>
