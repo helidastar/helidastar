@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff5ea8,50:c56ce0,100:a98bff&height=180&section=header&text=hi,%20i'm%20charity&fontSize=42&fontColor=f2e9fb&fontAlignY=38&desc=˚%20⋆%20a%20little%20corner%20of%20the%20galaxy%20⋆%20˚&descSize=16&descAlignY=60" width="100%" />
+<img src="./waving-cat.svg" width="170" alt="pixel cat waving" />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff5ea8,50:c56ce0,100:a98bff&height=160&section=header&text=hi,%20i'm%20charity&fontSize=42&fontColor=f2e9fb&fontAlignY=45" width="100%" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fraunces&size=20&pause=1200&color=FF5EA8&center=true&vCenter=true&width=520&lines=4th+year+computer+engineering+student;ui%2Fux+designer+%E2%99%A1+fullstack+developer;software+engineer+intern+at+innodata" alt="typing intro" />
 
@@ -10,11 +12,11 @@
 
 ### ⋆｡˚ about me
 
-> ♡ &nbsp;charity tiongson ricabo, though you can call me **chacha, chet, chai,** or **rye**
+> ♡ &nbsp;Charity Tiongson Ricabo, though you can call me **chacha, chet, chai,** or **rye**
 > ✧ &nbsp;bs computer engineering @ cebu institute of technology – university
 > ✧ &nbsp;software engineer intern @ innodata knowledge services
-> ✧ &nbsp;i love turning soft, pretty designs into real, working apps
-> ✧ &nbsp;off-screen: painting, reading, photography, and cats (always cats)
+> ✧ &nbsp;I specialize in translating user-centered designs into functional, full-stack applications.
+> ✧ &nbsp;Outside of development, I enjoy painting, reading, and photography.
 
 <br>
 
