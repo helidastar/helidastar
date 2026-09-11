@@ -1,16 +1,60 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**helidastar/helidastar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff5ea8,50:c56ce0,100:a98bff&height=180&section=header&text=hi,%20i'm%20charity&fontSize=42&fontColor=f2e9fb&fontAlignY=38&desc=˚%20⋆%20a%20little%20corner%20of%20the%20galaxy%20⋆%20˚&descSize=16&descAlignY=60" width="100%" />
 
-Here are some ideas to get you started:
+<img src="https://readme-typing-svg.demolab.com?font=Fraunces&size=20&pause=1200&color=FF5EA8&center=true&vCenter=true&width=520&lines=4th+year+computer+engineering+student;ui%2Fux+designer+%E2%99%A1+fullstack+developer;software+engineer+intern+at+innodata" alt="typing intro" />
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+</div>
+
+<br>
+
+### ⋆｡˚ about me
+
+> ♡ &nbsp;charity tiongson ricabo, though you can call me **chacha, chet, chai,** or **rye**
+> ✧ &nbsp;bs computer engineering @ cebu institute of technology – university
+> ✧ &nbsp;software engineer intern @ innodata knowledge services
+> ✧ &nbsp;i love turning soft, pretty designs into real, working apps
+> ✧ &nbsp;off-screen: painting, reading, photography, and cats (always cats)
+
+<br>
+
+### ⋆｡˚ things i build with
+
+<p>
+  <img src="https://img.shields.io/badge/typescript-ff5ea8?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/react-c56ce0?style=for-the-badge&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/next.js-a98bff?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/tailwind-ff5ea8?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/supabase-c56ce0?style=for-the-badge&logo=supabase&logoColor=white" />
+  <img src="https://img.shields.io/badge/c%23%20%2F%20.net-a98bff?style=for-the-badge&logo=dotnet&logoColor=white" />
+  <img src="https://img.shields.io/badge/figma-ff5ea8?style=for-the-badge&logo=figma&logoColor=white" />
+</p>
+
+<br>
+
+### ⋆｡˚ little projects
+
+| | project | what it is |
+|:-:|---|---|
+| ✧ | [**GARBO**](https://github.com/helidastar/GARBO-CCRVibe) | waste-management app (next.js + supabase) |
+| ✧ | [**MySpace Cafe**](https://github.com/helidastar/MySpace) | cafe menu kiosk + pantry tracker |
+| ✧ | **Reflect.ly** | full-stack journaling app |
+| ✧ | **PalengKart** | c# / .net market kiosk |
+
+<br>
+
+### ⋆｡˚ say hi
+
+<p>
+  <a href="mailto:chrdy.4u@gmail.com"><img src="https://img.shields.io/badge/email%20me-ffb3d9?style=for-the-badge&logo=gmail&logoColor=07040f" /></a>
+</p>
+
+<br>
+
+<div align="center">
+
+˚ ₊ ‧ ✧ &nbsp; thanks for stopping by &nbsp; ✧ ‧ ₊ ˚
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:a98bff,50:c56ce0,100:ff5ea8&height=100&section=footer" width="100%" />
+
+</div>
