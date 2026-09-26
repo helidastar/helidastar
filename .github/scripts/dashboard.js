@@ -243,7 +243,7 @@ function render(d) {
     });
     body += `<g opacity="0">
 ${motion()}
-<line x1="-46" y1="0" x2="0" y2="0" stroke="url(#cometTail)" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="-80" y1="0" x2="0" y2="0" stroke="url(#cometTail)" stroke-width="3.2" stroke-linecap="round"/>
 <circle r="7" fill="url(#cometHalo)"/>
 <circle r="2.6" fill="#ffffff" filter="url(#glow)"/>
 </g>`;
@@ -314,7 +314,7 @@ ${css}
 <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0;1 0" keyTimes="0;.45;1" dur="7s" repeatCount="indefinite"/>
 </linearGradient>
 <linearGradient id="wakeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${P.blue}"/><stop offset=".5" stop-color="${P.lav}"/><stop offset="1" stop-color="${P.pink}"/></linearGradient>
-<linearGradient id="cometTail" gradientUnits="userSpaceOnUse" x1="-46" y1="0" x2="0" y2="0"><stop offset="0" stop-color="${P.pink}" stop-opacity="0"/><stop offset=".7" stop-color="${P.pink}" stop-opacity=".6"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+<linearGradient id="cometTail" gradientUnits="userSpaceOnUse" x1="-80" y1="0" x2="0" y2="0"><stop offset="0" stop-color="${P.pink}" stop-opacity="0"/><stop offset=".7" stop-color="${P.pink}" stop-opacity=".6"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
 <radialGradient id="cometHalo"><stop offset="0" stop-color="${P.pinkSoft}" stop-opacity=".9"/><stop offset="1" stop-color="${P.pink}" stop-opacity="0"/></radialGradient>
 <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <mask id="crescent"><rect x="700" y="0" width="200" height="200" fill="#fff"/><circle cx="802" cy="62" r="22" fill="#000"/></mask>
