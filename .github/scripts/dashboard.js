@@ -93,7 +93,7 @@ function planet(kind, x, y) {
 
 function render(d) {
   const W = 900, M = 52, IW = W - M * 2;
-  let y = 0, body = '';
+  let y = 0, body = '', css = '';
 
   // --- header ---
   body += `<g class="in">
@@ -179,12 +179,75 @@ function render(d) {
   y += 24;
   const cell = IW / d.weeks.length, colors = ['#1d2c5c', '#4f74c8', P.blue, P.lav, P.pink], sizes = [1.2, 2.8, 3.8, 4.8, 6];
   body += `<ellipse cx="${W / 2}" cy="${y + cell * 3.5}" rx="330" ry="70" fill="url(#blobBlue)" class="pulse" style="animation-delay:-2s"/>`;
+  // every active day, in date order, becomes a stop on the comet's flight
+  const stops = [];
   d.weeks.forEach((w, i) => w.forEach((day) => {
     const cx = f1(M + i * cell + cell / 2), cy = f1(y + new Date(day.date).getUTCDay() * cell + cell / 2);
     const tip = `<title>${day.n} on ${day.date}</title>`;
     if (!day.level) body += `<circle cx="${cx}" cy="${cy}" r="${sizes[0]}" fill="${colors[0]}">${tip}</circle>`;
-    else body += `<g transform="translate(${cx} ${cy})"><path d="${sparkle(sizes[day.level])}" fill="${colors[day.level]}" class="tw2" style="animation-duration:${f1(2.5 + rnd() * 3.5)}s;animation-delay:-${f1(rnd() * 5)}s"${day.level === 4 ? ' filter="url(#glow)"' : ''}/>${tip}</g>`;
+    else stops.push({ x: cx, y: cy, day, tip });
   }));
+
+  // comet timeline: fly for FLY seconds, hold the lit sky, fade, repeat
+  const LOOP = 18, FLY = 11, FADE_AT = 88;
+  if (stops.length) {
+    // smooth catmull-rom flight path, sampled so length (and therefore timing) is exact
+    const pts = [{ x: M - 30, y: y + cell * 3.5 }, ...stops];
+    const flight = [pts[0]], at = [0];
+    for (let i = 0; i < pts.length - 1; i++) {
+      const p0 = pts[i - 1] || pts[i], p1 = pts[i], p2 = pts[i + 1], p3 = pts[i + 2] || p2;
+      for (let s = 1; s <= 10; s++) {
+        const t = s / 10, t2 = t * t, t3 = t2 * t;
+        const c = (a, b, e, g) => 0.5 * (2 * b + (-a + e) * t + (2 * a - 5 * b + 4 * e - g) * t2 + (-a + 3 * b - 3 * e + g) * t3);
+        flight.push({ x: c(p0.x, p1.x, p2.x, p3.x), y: c(p0.y, p1.y, p2.y, p3.y) });
+      }
+      at.push(flight.length - 1);
+    }
+    const cum = [0];
+    for (let i = 1; i < flight.length; i++) cum.push(cum[i - 1] + Math.hypot(flight[i].x - flight[i - 1].x, flight[i].y - flight[i - 1].y));
+    const L = cum[cum.length - 1];
+    const pathD = 'M' + flight.map((p) => `${f1(p.x)},${f1(p.y)}`).join(' L');
+    const flyPct = (FLY / LOOP) * 100;
+    const pct = (n) => +n.toFixed(2);
+    // time per hop grows with sqrt(distance): long empty stretches zip by, clusters get savored
+    const hopLen = stops.map((_, i) => cum[at[i + 1]] - cum[at[i]]);
+    const hopW = hopLen.map((l) => Math.sqrt(l) + 1.5), totalW = hopW.reduce((a, b) => a + b, 0);
+    const tAt = [0];
+    hopW.forEach((w) => tAt.push(tAt[tAt.length - 1] + w / totalW));
+    const stopPct = tAt.map((t) => pct(t * flyPct));
+
+    // constellation wake: drawn in lockstep with the comet (both move at constant speed)
+    css += `@keyframes wake{${stopPct.map((p, i) => `${p}%{stroke-dashoffset:${f1(L - cum[at[i]])};opacity:.55}`).join('')}${FADE_AT}%{stroke-dashoffset:0;opacity:.35}100%{stroke-dashoffset:0;opacity:0}}`;
+    body += `<path d="${pathD}" fill="none" stroke="url(#wakeGrad)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="${f1(L)}" style="animation:wake ${LOOP}s linear infinite"/>`;
+
+    stops.forEach((s, i) => {
+      const hit = stopPct[i + 1];
+      const lvl = s.day.level;
+      // star waits dim, flares when the comet arrives, stays lit, then fades with the loop
+      css += `@keyframes f${i}{0%,${hit}%{opacity:.16;transform:scale(.55)}${pct(hit + 0.6)}%{opacity:1;transform:scale(2.1)}${pct(hit + 3)}%,${FADE_AT}%{opacity:1;transform:scale(1)}100%{opacity:.16;transform:scale(.55)}}`;
+      css += `@keyframes r${i}{0%,${hit}%{opacity:0;transform:scale(.2)}${pct(hit + 0.4)}%{opacity:.9;transform:scale(.6)}${pct(hit + 4)}%,100%{opacity:0;transform:scale(2.6)}}`;
+      body += `<g transform="translate(${s.x} ${s.y})">
+<circle r="5" fill="none" stroke="${colors[lvl]}" stroke-width="1" vector-effect="non-scaling-stroke" class="fx" style="animation:r${i} ${LOOP}s linear infinite"/>
+<g class="fx" style="animation:f${i} ${LOOP}s ease-out infinite"><path d="${sparkle(sizes[lvl])}" fill="${colors[lvl]}" class="tw2" style="animation-duration:${f1(2.5 + rnd() * 3.5)}s;animation-delay:-${f1(rnd() * 5)}s"${lvl >= 3 ? ' filter="url(#glow)"' : ''}/></g>${s.tip}</g>`;
+    });
+
+    // the comet itself
+    const endKey = +(FLY / LOOP).toFixed(4);
+    const kp = at.map((a) => +(cum[a] / L).toFixed(4)).concat(1).join(';');
+    const kt = tAt.map((t) => +(t * endKey).toFixed(4)).concat(1).join(';');
+    const motion = (begin = 0) => `<animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.02;${endKey};${+(endKey + 0.03).toFixed(4)};1" dur="${LOOP}s" begin="${begin}s" repeatCount="indefinite"/>
+<animateMotion path="${pathD}" rotate="auto" keyPoints="${kp}" keyTimes="${kt}" calcMode="linear" dur="${LOOP}s" begin="${begin}s" repeatCount="indefinite"/>`;
+    // stardust trailing the comet
+    [[0.12, 1.6, P.pinkSoft, 0.8], [0.24, 1.2, P.lav, 0.6], [0.38, 0.9, P.sky, 0.45], [0.55, 0.7, P.pink, 0.3]].forEach(([lag, r, c, o]) => {
+      body += `<g opacity="0">${motion(lag)}<circle cy="${f1((rnd() - 0.5) * 6)}" r="${r}" fill="${c}" fill-opacity="${o}"/></g>`;
+    });
+    body += `<g opacity="0">
+${motion()}
+<line x1="-46" y1="0" x2="0" y2="0" stroke="url(#cometTail)" stroke-width="3.2" stroke-linecap="round"/>
+<circle r="7" fill="url(#cometHalo)"/>
+<circle r="2.6" fill="#ffffff" filter="url(#glow)"/>
+</g>`;
+  }
   body += `</g>`;
   y += cell * 7 + 44;
 
@@ -235,6 +298,8 @@ text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
 .shoot{animation:shoot 9s linear infinite;opacity:0}
 @keyframes shoot{0%{transform:translate(0,0);opacity:0}2%{opacity:1}9%{transform:translate(-380px,170px);opacity:0}100%{opacity:0}}
 a text{cursor:pointer}
+.fx{transform-box:fill-box;transform-origin:center}
+${css}
 </style>
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${P.navy1}"/><stop offset=".5" stop-color="${P.navy0}"/><stop offset="1" stop-color="${P.navy1}"/></linearGradient>
@@ -248,6 +313,9 @@ a text{cursor:pointer}
 <stop offset="0" stop-color="${P.text}"/><stop offset=".44" stop-color="${P.text}"/><stop offset=".5" stop-color="${P.pink}"/><stop offset=".56" stop-color="${P.lav}"/><stop offset=".62" stop-color="${P.text}"/><stop offset="1" stop-color="${P.text}"/>
 <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0;1 0" keyTimes="0;.45;1" dur="7s" repeatCount="indefinite"/>
 </linearGradient>
+<linearGradient id="wakeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${P.blue}"/><stop offset=".5" stop-color="${P.lav}"/><stop offset="1" stop-color="${P.pink}"/></linearGradient>
+<linearGradient id="cometTail" gradientUnits="userSpaceOnUse" x1="-46" y1="0" x2="0" y2="0"><stop offset="0" stop-color="${P.pink}" stop-opacity="0"/><stop offset=".7" stop-color="${P.pink}" stop-opacity=".6"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+<radialGradient id="cometHalo"><stop offset="0" stop-color="${P.pinkSoft}" stop-opacity=".9"/><stop offset="1" stop-color="${P.pink}" stop-opacity="0"/></radialGradient>
 <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <mask id="crescent"><rect x="700" y="0" width="200" height="200" fill="#fff"/><circle cx="802" cy="62" r="22" fill="#000"/></mask>
 <clipPath id="card"><rect width="${W}" height="${H}" rx="22"/></clipPath>
