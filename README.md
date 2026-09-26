@@ -1,62 +1,67 @@
 <div align="center">
 
-<img src="./waving-cat.svg" width="170" alt="pixel cat waving" />
+<img src="./waving-cat.svg" width="150" alt="pixel cat waving" />
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff5ea8,50:c56ce0,100:a98bff&height=160&section=header&text=hi,%20i'm%20charity&fontSize=42&fontColor=f2e9fb&fontAlignY=45" width="100%" />
+<img src="./assets/header.svg" width="100%" alt="charity ricabo" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fraunces&size=20&pause=1200&color=FF5EA8&center=true&vCenter=true&width=520&lines=4th+year+computer+engineering+student;ui%2Fux+designer+%E2%99%A1+fullstack+developer;software+engineer+intern+at+innodata" alt="typing intro" />
+<img src="https://readme-typing-svg.demolab.com?font=Fraunces&size=19&pause=1400&color=B8A9FF&center=true&vCenter=true&width=520&lines=4th+year+computer+engineering+student;ui%2Fux+designer+%E2%99%A1+full-stack+developer;software+engineer+intern+%40+innodata" alt="typing intro" />
 
 </div>
 
 <br>
 
-### ⋆｡˚ about me
+### ☾ &nbsp;about me
 
-> ♡ &nbsp;Charity Tiongson Ricabo, though you can call me **chacha, chet, chai,** or **rye**<br>
-> ✧ &nbsp;bs computer engineering @ cebu institute of technology – university<br>
-> ✧ &nbsp;software engineer intern @ innodata knowledge services<br>
-> ✧ &nbsp;I specialize in translating user-centered designs into functional, full-stack applications.<br>
-> ✧ &nbsp;Outside of development, I enjoy painting, reading, and photography.
+hi, i'm **charity tiongson ricabo**, but **chacha, chet, chai,** or **rye** works too.
+
+- bs computer engineering @ cebu institute of technology – university
+- software engineer intern @ innodata knowledge services
+- i like taking user-centered designs and turning them into real, working full-stack apps
+- off the clock: painting, reading, and taking photos
 
 <br>
 
-### ⋆｡˚ things i build with
+### ☾ &nbsp;things i build with
 
 <p>
-  <img src="https://img.shields.io/badge/typescript-ff5ea8?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/react-c56ce0?style=for-the-badge&logo=react&logoColor=white" />
-  <img src="https://img.shields.io/badge/next.js-a98bff?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/tailwind-ff5ea8?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <img src="https://img.shields.io/badge/supabase-c56ce0?style=for-the-badge&logo=supabase&logoColor=white" />
-  <img src="https://img.shields.io/badge/c%23%20%2F%20.net-a98bff?style=for-the-badge&logo=dotnet&logoColor=white" />
-  <img src="https://img.shields.io/badge/figma-ff5ea8?style=for-the-badge&logo=figma&logoColor=white" />
+  <img src="https://skillicons.dev/icons?i=ts,react,nextjs,tailwind,supabase,cs,dotnet,figma&theme=dark" alt="typescript, react, next.js, tailwind, supabase, c#, .net, figma" />
 </p>
 
 <br>
 
-### ⋆｡˚ little projects
+### ☾ &nbsp;little projects
 
 | | project | what it is |
 |:-:|---|---|
-| ✧ | [**GARBO**](https://github.com/helidastar/GARBO-CCRVibe) | waste-management app (next.js + supabase) |
-| ✧ | [**MySpace Cafe**](https://github.com/helidastar/MySpace) | cafe menu kiosk + pantry tracker |
-| ✧ | **Reflect.ly** | full-stack journaling app |
-| ✧ | **PalengKart** | c# / .net market kiosk |
+| ✦ | [**GARBO**](https://github.com/helidastar/GARBO-CCRVibe) | waste-management app (next.js + supabase) |
+| ✦ | [**MySpace Cafe**](https://github.com/helidastar/MySpace) | cafe menu kiosk + pantry tracker |
+| ✦ | **Reflect.ly** | full-stack journaling app |
+| ✦ | **PalengKart** | c# / .net market kiosk |
 
 <br>
 
-### ⋆｡˚ say hi
+### ☾ &nbsp;night sky activity
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=helidastar&background=0B0A1F&border=2A2758&stroke=2A2758&ring=B8A9FF&fire=FFE9A8&currStreakNum=F4F0FF&sideNums=F4F0FF&currStreakLabel=B8A9FF&sideLabels=B8A9FF&dates=7F78B0&border_radius=14" width="495" alt="github streak" />
+
+<br><br>
+
+<img src="https://raw.githubusercontent.com/helidastar/helidastar/output/star-chart.svg" width="100%" alt="contributions drawn as a star chart" />
+
+</div>
+
+<br>
+
+### ☾ &nbsp;say hi
 
 <p>
-  <a href="mailto:chrdy.4u@gmail.com"><img src="https://img.shields.io/badge/email%20me-ffb3d9?style=for-the-badge&logo=gmail&logoColor=07040f" /></a>
+  <a href="mailto:chrdy.4u@gmail.com"><img src="https://img.shields.io/badge/email%20me-15132E?style=for-the-badge&logo=gmail&logoColor=B8A9FF" alt="email me" /></a>
 </p>
 
 <br>
 
 <div align="center">
-
-˚ ₊ ‧ ✧ &nbsp; thanks for stopping by &nbsp; ✧ ‧ ₊ ˚
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:a98bff,50:c56ce0,100:ff5ea8&height=100&section=footer" width="100%" />
-
+<img src="./assets/footer.svg" width="100%" alt="thanks for stopping by" />
 </div>
