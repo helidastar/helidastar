@@ -99,7 +99,7 @@ function render(d) {
   body += `<g class="in">
 <text x="${W / 2}" y="112" text-anchor="middle" class="name" fill="url(#shimmer)">charity ricabo</text>
 <text x="${W / 2}" y="148" text-anchor="middle" class="cap" fill="${P.pink}" letter-spacing="5">UI/UX DESIGNER  ·  FULL-STACK DEVELOPER</text>
-<text x="${W / 2}" y="176" text-anchor="middle" class="small" fill="${P.muted}" letter-spacing="2">user-centered design  →  working full-stack apps</text>
+<text x="${W / 2}" y="176" text-anchor="middle" class="small" fill="${P.muted}" letter-spacing="2">student developer</text>
 <text x="${W / 2}" y="198" text-anchor="middle" class="small" fill="${P.dim}" letter-spacing="1">github.com/${esc(login)}</text>
 </g>`;
   y = 240;

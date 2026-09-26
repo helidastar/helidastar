@@ -2,8 +2,6 @@
 
 <img src="./waving-cat.svg" width="140" alt="pixel cat waving" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fraunces&size=18&pause=1400&color=FF8FC8&center=true&vCenter=true&width=520&lines=4th+year+computer+engineering+student;ui%2Fux+designer+%E2%99%A1+full-stack+developer;software+engineer+intern+%40+innodata" alt="typing intro" />
-
 <img src="https://raw.githubusercontent.com/helidastar/helidastar/output/dashboard.svg" width="100%" alt="charity ricabo · ui/ux designer and full-stack developer" />
 
 <br><br>
