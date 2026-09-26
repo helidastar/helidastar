@@ -22,7 +22,7 @@ jobs:
           node-version: 20
 
       - name: draw the sky
-        run: mkdir -p dist && node .github/scripts/star-chart.js ${{ github.repository_owner }} dist/star-chart.svg
+        run: node .github/scripts/star-chart.js ${{ github.repository_owner }} dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
