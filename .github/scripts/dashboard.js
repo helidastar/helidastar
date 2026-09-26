@@ -91,6 +91,41 @@ function planet(kind, x, y) {
   return `<g transform="translate(${x} ${y})"><g><animateTransform attributeName="transform" type="translate" values="3 -2;-3 2;3 -2" dur="5s" repeatCount="indefinite"/><line x1="4" y1="-4" x2="20" y2="-14" stroke="${P.pink}" stroke-width="2" stroke-linecap="round" opacity=".45"/><circle r="4.5" fill="${P.pink}"/></g></g>`;
 }
 
+function projectCard(p, r, i) {
+  const W = 290, H = 140;
+  const lang = (r.primaryLanguage && r.primaryLanguage.name) || p.lang || '';
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
+.small{font-size:12px}
+.ptitle{font:italic 20px Georgia,'Times New Roman',serif;fill:${P.text}}
+.tw{animation:tw 4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
+.in{animation:in 1s ease-out both}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${P.navy1}"/><stop offset="1" stop-color="${P.navy0}"/></linearGradient>
+<radialGradient id="blob"><stop offset="0" stop-color="${[P.pink, P.lav, P.blue][i]}" stop-opacity=".18"/><stop offset="1" stop-color="${[P.pink, P.lav, P.blue][i]}" stop-opacity="0"/></radialGradient>
+<clipPath id="c"><rect width="${W}" height="${H}" rx="14"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
+<rect width="${W}" height="${H}" fill="url(#bg)"/>
+<ellipse cx="${W - 40}" cy="30" rx="110" ry="70" fill="url(#blob)"/>
+${starfield(22, 0, 0, W, H)}
+</g>
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="14" fill="none" stroke="${P.line}"/>
+${planet(p.planet, W - 34, 34)}
+<g class="in">
+<text x="20" y="38" class="ptitle">${esc(p.repo)}</text>
+${p.body.map((l, k) => `<text x="20" y="${63 + k * 17}" class="small" fill="${P.muted}">${esc(l)}</text>`).join('')}
+<circle cx="24" cy="${H - 24}" r="4" fill="${[P.pink, P.lav, P.blue][i]}"/>
+<text x="34" y="${H - 20}" class="small" fill="${P.muted}">${esc(lang)}</text>
+<text x="${W - 20}" y="${H - 20}" text-anchor="end" class="small" fill="${P.dim}">✦ ${r.stargazerCount || 0}   ·   ${r.forkCount || 0} forks</text>
+</g>
+</svg>`;
+}
+
 function render(d) {
   const W = 900, M = 52, IW = W - M * 2;
   let y = 0, body = '', css = '';
@@ -254,26 +289,6 @@ ${motion()}
   body += `</g>`;
   y += cell * 7 + 44;
 
-  // --- projects ---
-  body += `<g class="in" style="animation-delay:.8s">${label(M, y, 'CURRENT ORBITS')}`;
-  y += 18;
-  const cg = 16, cw = (IW - cg * 2) / 3, ch = 128;
-  PROJECTS.forEach((p, i) => {
-    const r = d.byName[p.repo] || {};
-    const x = M + i * (cw + cg);
-    const lang = (r.primaryLanguage && r.primaryLanguage.name) || p.lang || '';
-    const inner = `<rect x="${f1(x)}" y="${y}" width="${f1(cw)}" height="${ch}" rx="12" fill="${P.navy2}" fill-opacity=".35" stroke="${P.line}"/>
-<text x="${f1(x + 18)}" y="${y + 34}" class="ptitle">${esc(p.repo)}</text>
-${p.body.map((l, k) => `<text x="${f1(x + 18)}" y="${y + 58 + k * 17}" class="small" fill="${P.muted}">${esc(l)}</text>`).join('')}
-<circle cx="${f1(x + 22)}" cy="${y + ch - 22}" r="4" fill="${[P.pink, P.lav, P.blue][i]}"/>
-<text x="${f1(x + 32)}" y="${y + ch - 18}" class="small" fill="${P.muted}">${esc(lang)}</text>
-<text x="${f1(x + cw - 18)}" y="${y + ch - 18}" text-anchor="end" class="small" fill="${P.dim}">${p.private ? 'private' : `✦ ${r.stargazerCount || 0}   ·   ${r.forkCount || 0} forks`}</text>
-${planet(p.planet, f1(x + cw - 30), y + 30)}`;
-    body += p.private ? inner : `<a href="https://github.com/${login}/${p.repo}" target="_blank">${inner}</a>`;
-  });
-  body += `</g>`;
-  y += ch + 44;
-
   body += `<text x="${W / 2}" y="${y}" text-anchor="middle" class="tiny" fill="${P.dim}" letter-spacing="3">AUTO-UPDATED FROM GITHUB  ·  EVERY 12 HOURS</text>`;
   const H = y + 30;
 
@@ -343,5 +358,7 @@ ${body}
 (async () => {
   const data = await load();
   fs.writeFileSync(out, render(data));
+  const dir = require('path').dirname(out);
+  PROJECTS.forEach((p, i) => fs.writeFileSync(`${dir}/project-${p.repo.toLowerCase()}.svg`, projectCard(p, data.byName[p.repo] || {}, i)));
   console.log(`wrote ${out}: ${data.total} contributions, ${data.repoCount} repos, ${data.stars} stars, streak ${data.current}/${data.longest}`);
 })().catch((e) => { console.error(e); process.exit(1); });
