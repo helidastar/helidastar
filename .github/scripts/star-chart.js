@@ -7,8 +7,8 @@ const fs = require('fs');
 const [, , user, out = '.'] = process.argv;
 
 const themes = {
-  night: { colors: ['#4a4290', '#8f7df0', '#b8a9ff', '#e4ddff', '#ffe9a8'], dust: '#ffffff', lbl: '#8f86c9', cap: '#d9d1ff', tail: '#ffffff' },
-  day: { colors: ['#cfc8ee', '#a08cf5', '#7a5cff', '#4b2fc9', '#d19a00'], dust: '#7a5cff', lbl: '#7a70b5', cap: '#3b2f80', tail: '#7a5cff' },
+  night: { colors: ['#243a6b', '#4f74c8', '#8fa8ff', '#c9b8ff', '#ff8fc8'], dust: '#ffffff', lbl: '#7f95cc', cap: '#d9e1ff', tail: '#ffd1ea' },
+  day: { colors: ['#cdd6ee', '#7f9ce0', '#3d63c4', '#7a5cff', '#d6428f'], dust: '#2f5aa8', lbl: '#5a70a8', cap: '#16275a', tail: '#d6428f' },
 };
 
 async function fetchWeeks(login) {
