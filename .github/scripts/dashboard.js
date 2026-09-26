@@ -12,12 +12,12 @@ const P = {
 // stack bar colors, in order of usage
 const LANG = ['#ff8fc8', '#b8a9ff', '#8fa8ff', '#ffd1ea', '#6fd3ff', '#d9c9ff', '#4f74c8', '#ff6fa8'];
 
-const STACK = ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Tailwind', 'Vite', 'Supabase', 'PostgreSQL', 'Prisma', 'Python', 'LLM Integration', 'RAG', 'C++', 'C# / .NET', 'Figma'];
+const STACK = ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Tailwind', 'Vite', 'Supabase', 'PostgreSQL', 'SQLite', 'Prisma', 'Vitest', 'Python', 'LLM Integration', 'RAG', 'C++', 'ESP32', 'C# / .NET', 'Figma'];
 
 const PROJECTS = [
   { repo: 'SAGIP-AI', lang: 'TypeScript', body: ['ai-assisted emergency reporting', '+ incident prioritization'], planet: 'ring' },
   { repo: 'GARBO', lang: 'TypeScript', body: ['campus waste-management app', 'that rewards proper segregation'], planet: 'moon' },
-  { repo: 'Reflect.ly', body: ['full-stack journaling app'], planet: 'comet', private: true, lang: 'JavaScript' },
+  { repo: 'PestBlaster', lang: 'TypeScript', body: ['autonomous pest-detecting turret', 'that sprays organic deterrent'], planet: 'comet' },
 ];
 
 async function gql(query, variables) {
@@ -105,12 +105,15 @@ function render(d) {
   y = 240;
 
   // --- stack pills ---
-  // pills wrap into centered rows
+  // pills wrap into centered rows of roughly equal width
   const gap = 10, rows = [[]];
+  const pillW = (s) => s.length * 7.2 + 26;
+  const allW = STACK.reduce((a, s) => a + pillW(s) + gap, 0);
+  const target = allW / Math.ceil(allW / (IW - 40));
   let rowW = 0;
   STACK.forEach((s, i) => {
-    const w = s.length * 7.2 + 26;
-    if (rowW + w > IW - 40 && rows[rows.length - 1].length) { rows.push([]); rowW = 0; }
+    const w = pillW(s);
+    if (rowW + w / 2 > target && rows[rows.length - 1].length) { rows.push([]); rowW = 0; }
     rows[rows.length - 1].push({ s, w, i });
     rowW += w + gap;
   });
@@ -243,9 +246,9 @@ function render(d) {
     });
     body += `<g opacity="0">
 ${motion()}
-<line x1="-80" y1="0" x2="0" y2="0" stroke="url(#cometTail)" stroke-width="3.2" stroke-linecap="round"/>
-<circle r="7" fill="url(#cometHalo)"/>
-<circle r="2.6" fill="#ffffff" filter="url(#glow)"/>
+<line x1="-80" y1="0" x2="0" y2="0" stroke="url(#cometTail)" stroke-width="4.4" stroke-linecap="round"/>
+<circle r="10" fill="url(#cometHalo)"/>
+<circle r="3.6" fill="#ffffff" filter="url(#glow)"/>
 </g>`;
   }
   body += `</g>`;
