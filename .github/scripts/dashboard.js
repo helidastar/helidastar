@@ -12,7 +12,7 @@ const P = {
 // stack bar colors, in order of usage
 const LANG = ['#ff8fc8', '#b8a9ff', '#8fa8ff', '#ffd1ea', '#6fd3ff', '#d9c9ff', '#4f74c8', '#ff6fa8'];
 
-const STACK = ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Tailwind', 'Vite', 'Supabase', 'PostgreSQL', 'Prisma', 'Python', 'C++', 'C# / .NET', 'Figma'];
+const STACK = ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Tailwind', 'Vite', 'Supabase', 'PostgreSQL', 'Prisma', 'Python', 'LLM Integration', 'RAG', 'C++', 'C# / .NET', 'Figma'];
 
 const PROJECTS = [
   { repo: 'SAGIP-AI', lang: 'TypeScript', body: ['ai-assisted emergency reporting', '+ incident prioritization'], planet: 'ring' },
