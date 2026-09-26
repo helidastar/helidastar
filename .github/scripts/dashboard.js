@@ -12,7 +12,7 @@ const P = {
 // stack bar colors, in order of usage
 const LANG = ['#ff8fc8', '#b8a9ff', '#8fa8ff', '#ffd1ea', '#6fd3ff', '#d9c9ff', '#4f74c8', '#ff6fa8'];
 
-const STACK = ['TypeScript', 'React', 'Next.js', 'Tailwind', 'Supabase', 'C# / .NET', 'Figma'];
+const STACK = ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Tailwind', 'Vite', 'Supabase', 'PostgreSQL', 'Prisma', 'Python', 'C++', 'C# / .NET', 'Figma'];
 
 const PROJECTS = [
   { repo: 'SAGIP-AI', lang: 'TypeScript', body: ['ai-assisted emergency reporting', '+ incident prioritization'], planet: 'ring' },
@@ -105,18 +105,28 @@ function render(d) {
   y = 240;
 
   // --- stack pills ---
-  const pw = STACK.map((s) => s.length * 7.2 + 26);
-  const gap = 10, total = pw.reduce((a, b) => a + b, 0) + gap * (STACK.length - 1);
-  let px = (W - total) / 2;
-  body += `<g class="in" style="animation-delay:.2s">`;
+  // pills wrap into centered rows
+  const gap = 10, rows = [[]];
+  let rowW = 0;
   STACK.forEach((s, i) => {
-    const c = [P.pink, P.lav, P.blue][i % 3];
-    body += `<rect x="${f1(px)}" y="${y - 17}" width="${f1(pw[i])}" height="26" rx="13" fill="${c}" fill-opacity=".08" stroke="${c}" stroke-opacity=".55"/>`;
-    body += `<text x="${f1(px + pw[i] / 2)}" y="${y + 1}" text-anchor="middle" class="pill" fill="${P.text}">${esc(s)}</text>`;
-    px += pw[i] + gap;
+    const w = s.length * 7.2 + 26;
+    if (rowW + w > IW - 40 && rows[rows.length - 1].length) { rows.push([]); rowW = 0; }
+    rows[rows.length - 1].push({ s, w, i });
+    rowW += w + gap;
+  });
+  body += `<g class="in" style="animation-delay:.2s">`;
+  rows.forEach((row) => {
+    let px = (W - (row.reduce((a, p) => a + p.w, 0) + gap * (row.length - 1))) / 2;
+    for (const { s, w, i } of row) {
+      const c = [P.pink, P.lav, P.blue][i % 3];
+      body += `<rect x="${f1(px)}" y="${y - 17}" width="${f1(w)}" height="26" rx="13" fill="${c}" fill-opacity=".08" stroke="${c}" stroke-opacity=".55"/>`;
+      body += `<text x="${f1(px + w / 2)}" y="${y + 1}" text-anchor="middle" class="pill" fill="${P.text}">${esc(s)}</text>`;
+      px += w + gap;
+    }
+    y += 36;
   });
   body += `</g>`;
-  y += 40;
+  y += 4;
 
   // --- stats row ---
   body += `<line x1="${M}" y1="${y}" x2="${W - M}" y2="${y}" stroke="${P.line}"/>`;
