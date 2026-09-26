@@ -189,7 +189,7 @@ function render(d) {
   }));
 
   // comet timeline: fly for FLY seconds, hold the lit sky, fade, repeat
-  const LOOP = 18, FLY = 11, FADE_AT = 88;
+  const LOOP = 13, FLY = 7, FADE_AT = 88;
   if (stops.length) {
     // smooth catmull-rom flight path, sampled so length (and therefore timing) is exact
     const pts = [{ x: M - 30, y: y + cell * 3.5 }, ...stops];
