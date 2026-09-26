@@ -177,7 +177,7 @@ function render(d) {
   // --- constellation activity ---
   body += `<g class="in" style="animation-delay:.65s">${label(M, y, 'CONSTELLATION ACTIVITY')}${label(W - M, y, `${d.total} contributions · last year`, 'end')}`;
   y += 24;
-  const cell = IW / d.weeks.length, colors = ['#1d2c5c', '#4f74c8', P.blue, P.lav, P.pink], sizes = [1.2, 2.8, 3.8, 4.8, 6];
+  const cell = IW / d.weeks.length, colors = ['#1d2c5c', '#4f74c8', P.blue, P.lav, P.pink], sizes = [1.5, 3.6, 4.8, 6, 7.4];
   body += `<ellipse cx="${W / 2}" cy="${y + cell * 3.5}" rx="330" ry="70" fill="url(#blobBlue)" class="pulse" style="animation-delay:-2s"/>`;
   // every active day, in date order, becomes a stop on the comet's flight
   const stops = [];
