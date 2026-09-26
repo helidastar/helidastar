@@ -1,4 +1,4 @@
-name: star chart
+name: night sky dashboard
 
 on:
   schedule:
@@ -22,9 +22,7 @@ jobs:
           node-version: 20
 
       - name: draw the sky
-        run: |
-          node .github/scripts/star-chart.js ${{ github.repository_owner }} dist
-          node .github/scripts/project-cards.js ${{ github.repository_owner }} dist
+        run: mkdir -p dist && node .github/scripts/dashboard.js ${{ github.repository_owner }} dist/dashboard.svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
