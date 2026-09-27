@@ -18,6 +18,8 @@ const PROJECTS = [
   { repo: 'SAGIP-AI', lang: 'TypeScript', body: ['ai-assisted emergency reporting', '+ incident prioritization'], planet: 'ring' },
   { repo: 'GARBO', lang: 'TypeScript', body: ['campus waste-management app', 'that rewards proper segregation'], planet: 'moon' },
   { repo: 'PestBlaster', lang: 'TypeScript', body: ['autonomous pest-detecting turret', 'that sprays organic deterrent'], planet: 'comet' },
+  { repo: 'Hiraya', lang: 'TypeScript', body: ['journaling + mood-tracking app', 'with a small community feed'], planet: 'twin' },
+  { repo: 'PalengKart-Console', title: 'PalengKart', lang: 'C#', body: ['console inventory + point-of-sale', 'system for small stores'], planet: 'spark' },
 ];
 
 async function gql(query, variables) {
@@ -86,6 +88,10 @@ function starfield(n, x0, y0, w, h) {
 }
 
 function planet(kind, x, y) {
+  // two stars circling each other
+  if (kind === 'twin') return `<g transform="translate(${x} ${y})"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/><circle cx="-7" r="5.5" fill="${P.lav}"/><circle cx="9" r="3.5" fill="${P.pink}"/></g></g>`;
+  // a pulsing four-point star
+  if (kind === 'spark') return `<g transform="translate(${x} ${y})"><path d="${sparkle(11)}" fill="${P.pinkSoft}"><animateTransform attributeName="transform" type="scale" values=".8;1.1;.8" dur="3s" repeatCount="indefinite"/></path><circle r="3" fill="${P.pink}"/></g>`;
   if (kind === 'ring') return `<g transform="translate(${x} ${y})"><circle r="10" fill="${P.lav}"/><ellipse rx="18" ry="5" fill="none" stroke="${P.pink}" stroke-width="1.3" transform="rotate(-18)"><animateTransform attributeName="transform" type="rotate" values="-18;-8;-18" dur="6s" repeatCount="indefinite"/></ellipse></g>`;
   if (kind === 'moon') return `<g transform="translate(${x} ${y})"><circle r="9" fill="${P.lav}"/><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/><circle cx="17" r="2.8" fill="${P.pink}"/></g></g>`;
   return `<g transform="translate(${x} ${y})"><g><animateTransform attributeName="transform" type="translate" values="3 -2;-3 2;3 -2" dur="5s" repeatCount="indefinite"/><line x1="4" y1="-4" x2="20" y2="-14" stroke="${P.pink}" stroke-width="2" stroke-linecap="round" opacity=".45"/><circle r="4.5" fill="${P.pink}"/></g></g>`;
@@ -106,7 +112,7 @@ text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
 </style>
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${P.navy1}"/><stop offset="1" stop-color="${P.navy0}"/></linearGradient>
-<radialGradient id="blob"><stop offset="0" stop-color="${[P.pink, P.lav, P.blue][i]}" stop-opacity=".18"/><stop offset="1" stop-color="${[P.pink, P.lav, P.blue][i]}" stop-opacity="0"/></radialGradient>
+<radialGradient id="blob"><stop offset="0" stop-color="${[P.pink, P.lav, P.blue][i % 3]}" stop-opacity=".18"/><stop offset="1" stop-color="${[P.pink, P.lav, P.blue][i % 3]}" stop-opacity="0"/></radialGradient>
 <clipPath id="c"><rect width="${W}" height="${H}" rx="14"/></clipPath>
 </defs>
 <g clip-path="url(#c)">
@@ -117,9 +123,9 @@ ${starfield(22, 0, 0, W, H)}
 <rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="14" fill="none" stroke="${P.line}"/>
 ${planet(p.planet, W - 34, 34)}
 <g class="in">
-<text x="20" y="38" class="ptitle">${esc(p.repo)}</text>
+<text x="20" y="38" class="ptitle">${esc(p.title || p.repo)}</text>
 ${p.body.map((l, k) => `<text x="20" y="${63 + k * 17}" class="small" fill="${P.muted}">${esc(l)}</text>`).join('')}
-<circle cx="24" cy="${H - 24}" r="4" fill="${[P.pink, P.lav, P.blue][i]}"/>
+<circle cx="24" cy="${H - 24}" r="4" fill="${[P.pink, P.lav, P.blue][i % 3]}"/>
 <text x="34" y="${H - 20}" class="small" fill="${P.muted}">${esc(lang)}</text>
 <text x="${W - 20}" y="${H - 20}" text-anchor="end" class="small" fill="${P.dim}">✦ ${r.stargazerCount || 0}   ·   ${r.forkCount || 0} forks</text>
 </g>

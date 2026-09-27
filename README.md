@@ -7,6 +7,8 @@
 <a href="https://github.com/helidastar/SAGIP-AI"><img src="https://raw.githubusercontent.com/helidastar/helidastar/output/project-sagip-ai.svg" width="32%" alt="SAGIP-AI" /></a>
 <a href="https://github.com/helidastar/GARBO"><img src="https://raw.githubusercontent.com/helidastar/helidastar/output/project-garbo.svg" width="32%" alt="GARBO" /></a>
 <a href="https://github.com/helidastar/PestBlaster"><img src="https://raw.githubusercontent.com/helidastar/helidastar/output/project-pestblaster.svg" width="32%" alt="PestBlaster" /></a>
+<a href="https://github.com/helidastar/Hiraya"><img src="https://raw.githubusercontent.com/helidastar/helidastar/output/project-hiraya.svg" width="32%" alt="Hiraya" /></a>
+<a href="https://github.com/helidastar/PalengKart-Console"><img src="https://raw.githubusercontent.com/helidastar/helidastar/output/project-palengkart-console.svg" width="32%" alt="PalengKart" /></a>
 
 <br><br>
 
