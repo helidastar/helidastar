@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 140" width="290" height="140">
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
+.small{font-size:12px}
+.ptitle{font:italic 20px Georgia,'Times New Roman',serif;fill:#eef2ff}
+.tw{animation:tw 4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.2}50%{opacity:1}}
+.in{animation:in 1s ease-out both}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1433"/><stop offset="1" stop-color="#070b1f"/></linearGradient>
+<radialGradient id="blob"><stop offset="0" stop-color="#ff8fc8" stop-opacity=".18"/><stop offset="1" stop-color="#ff8fc8" stop-opacity="0"/></radialGradient>
+<clipPath id="c"><rect width="290" height="140" rx="14"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
+<rect width="290" height="140" fill="url(#bg)"/>
+<ellipse cx="250" cy="30" rx="110" ry="70" fill="url(#blob)"/>
+<circle cx="215.7" cy="7.5" r="0.6" fill="#ffffff" class="tw" style="animation-duration:3.9s;animation-delay:-2.9s"/><circle cx="273.9" cy="28.9" r="1.3" fill="#ffd1ea" class="tw" style="animation-duration:5.5s;animation-delay:-3.1s"/><circle cx="45.9" cy="36.1" r="0.8" fill="#c9d6ff" class="tw" style="animation-duration:4.9s;animation-delay:-3.6s"/><circle cx="65.5" cy="75" r="0.4" fill="#b8a9ff" class="tw" style="animation-duration:6.2s;animation-delay:-4.6s"/><circle cx="16.1" cy="94.7" r="1.7" fill="#ffffff" class="tw" style="animation-duration:5.9s;animation-delay:-3.4s"/><circle cx="72.7" cy="67.9" r="0.5" fill="#ffd1ea" class="tw" style="animation-duration:2.7s;animation-delay:-2.6s"/><circle cx="160.2" cy="93.9" r="0.5" fill="#c9d6ff" class="tw" style="animation-duration:4s;animation-delay:-0.2s"/><circle cx="149.9" cy="91.3" r="0.5" fill="#b8a9ff" class="tw" style="animation-duration:5.3s;animation-delay:-1.1s"/><circle cx="286.3" cy="128.1" r="0.4" fill="#ffffff" class="tw" style="animation-duration:4.9s;animation-delay:-2.4s"/><circle cx="184.7" cy="21.2" r="0.4" fill="#ffd1ea" class="tw" style="animation-duration:5.4s;animation-delay:-3s"/><circle cx="74.7" cy="3.4" r="0.4" fill="#c9d6ff" class="tw" style="animation-duration:5.2s;animation-delay:-2.3s"/><circle cx="114.4" cy="106.7" r="0.4" fill="#b8a9ff" class="tw" style="animation-duration:4.6s;animation-delay:-3.7s"/><circle cx="148.6" cy="25.5" r="0.4" fill="#ffffff" class="tw" style="animation-duration:4.7s;animation-delay:-5s"/><circle cx="59.8" cy="101.2" r="0.6" fill="#ffd1ea" class="tw" style="animation-duration:4.4s;animation-delay:-4.7s"/><circle cx="189.6" cy="38.9" r="0.9" fill="#c9d6ff" class="tw" style="animation-duration:6s;animation-delay:-2.6s"/><circle cx="166" cy="122" r="0.4" fill="#b8a9ff" class="tw" style="animation-duration:3.8s;animation-delay:-2.8s"/><circle cx="7.1" cy="113.5" r="1.2" fill="#ffffff" class="tw" style="animation-duration:5.7s;animation-delay:-1.7s"/><circle cx="98.7" cy="126.4" r="1" fill="#ffd1ea" class="tw" style="animation-duration:4.2s;animation-delay:-0.7s"/><circle cx="74.4" cy="75.8" r="0.4" fill="#c9d6ff" class="tw" style="animation-duration:3.7s;animation-delay:-0.4s"/><circle cx="173.3" cy="70.9" r="0.6" fill="#b8a9ff" class="tw" style="animation-duration:5.9s;animation-delay:-5.1s"/><circle cx="45.5" cy="2.3" r="1.3" fill="#ffffff" class="tw" style="animation-duration:4.9s;animation-delay:-1.8s"/><circle cx="100.8" cy="130.8" r="0.5" fill="#ffd1ea" class="tw" style="animation-duration:6.3s;animation-delay:-0.4s"/>
+</g>
+<rect x=".5" y=".5" width="289" height="139" rx="14" fill="none" stroke="#22346b"/>
+<g transform="translate(256 34)"><circle r="10" fill="#b8a9ff"/><ellipse rx="18" ry="5" fill="none" stroke="#ff8fc8" stroke-width="1.3" transform="rotate(-18)"><animateTransform attributeName="transform" type="rotate" values="-18;-8;-18" dur="6s" repeatCount="indefinite"/></ellipse></g>
+<g class="in">
+<text x="20" y="38" class="ptitle">SAGIP-AI</text>
+<text x="20" y="63" class="small" fill="#8a97c4">ai-assisted emergency reporting</text><text x="20" y="80" class="small" fill="#8a97c4">+ incident prioritization</text>
+<circle cx="24" cy="116" r="4" fill="#ff8fc8"/>
+<text x="34" y="120" class="small" fill="#8a97c4">TypeScript</text>
+<text x="270" y="120" text-anchor="end" class="small" fill="#5a6a9c">✦ 1   ·   0 forks</text>
+</g>
+</svg>
