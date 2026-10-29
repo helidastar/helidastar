@@ -2,7 +2,7 @@
 
 ### hi, i'm charity
 
-comp eng student. i mostly do ui/ux and full-stack web stuff, and sometimes hardware when a project needs a robot that sprays bugs.
+comp eng student. I mostly do ui/ux and full-stack web stuff, and sometimes hardware.
 
 **stuff i've built**
 
