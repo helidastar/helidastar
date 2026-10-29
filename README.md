@@ -1,14 +1,16 @@
 <img src="./waving-cat.svg" width="110" align="right" alt="pixel cat waving" />
 
-### hi, i'm charity
+### Hi, I'm Charity
 
-comp eng student. I mostly do ui/ux and full-stack web stuff, and sometimes hardware.
+Computer Engineering student. I mostly do UI/UX and full-stack web stuff, and sometimes hardware.
 
-i usually start in figma, then build it in next.js. when a project needs to move or sense something, it ends up on an esp32.
+I usually start in figma and stitch, then build it in VS Code. When a project needs to move or automized IRL, help me.
+
+I touch grass and have life outside, so I might not always commit and do stuffs here UNLESS I have to.
 
 <br>
 
-**stuff i've built**
+**stuff I've built**
 
 - [SAGIP-AI](https://github.com/helidastar/SAGIP-AI): emergency reports that get ranked by how urgent they are, so the worst ones show up first
 - [GARBO](https://github.com/helidastar/GARBO): waste app for campus. segregate your trash properly, get rewarded
@@ -18,7 +20,7 @@ i usually start in figma, then build it in next.js. when a project needs to move
 
 <br>
 
-**what i use**
+**what I use**
 
 <p>
   <a href="https://www.figma.com"><img src="https://skillicons.dev/icons?i=figma&theme=dark" width="44" alt="Figma" title="Figma" /></a>
