@@ -1,18 +1,34 @@
+<img src="./waving-cat.svg" width="110" align="right" alt="pixel cat waving" />
+
+### hi, i'm charity
+
+comp eng student. i mostly do ui/ux and full-stack web stuff, and sometimes hardware when a project needs a robot that sprays bugs.
+
+**stuff i've built**
+
+- [SAGIP-AI](https://github.com/helidastar/SAGIP-AI): emergency reports that get ranked by how urgent they are, so the worst ones show up first
+- [GARBO](https://github.com/helidastar/GARBO): waste app for campus. segregate your trash properly, get rewarded
+- [PestBlaster](https://github.com/helidastar/PestBlaster): a camera turret that spots pests in the garden and sprays them with organic deterrent
+- [Hiraya](https://github.com/helidastar/Hiraya): journal + mood tracker with a small community feed
+- [PalengKart](https://github.com/helidastar/PalengKart-Console): inventory and POS for small stores, runs in the console (C#)
+
+**usually using** typescript, next.js, react, tailwind, supabase/postgres and prisma. python, c++ and esp32 for the hardware ones. figma before all of it.
+
+<br>
+
 <div align="center">
 
-<img src="./waving-cat.svg" width="140" alt="pixel cat waving" />
-
-<img src="https://raw.githubusercontent.com/helidastar/helidastar/output/dashboard.svg" width="100%" alt="charity ricabo · ui/ux designer and full-stack developer" />
-
-<a href="https://github.com/helidastar/SAGIP-AI"><img src="https://raw.githubusercontent.com/helidastar/helidastar/output/project-sagip-ai.svg" width="32%" alt="SAGIP-AI" /></a>
-<a href="https://github.com/helidastar/GARBO"><img src="https://raw.githubusercontent.com/helidastar/helidastar/output/project-garbo.svg" width="32%" alt="GARBO" /></a>
-<a href="https://github.com/helidastar/PestBlaster"><img src="https://raw.githubusercontent.com/helidastar/helidastar/output/project-pestblaster.svg" width="32%" alt="PestBlaster" /></a>
-<a href="https://github.com/helidastar/Hiraya"><img src="https://raw.githubusercontent.com/helidastar/helidastar/output/project-hiraya.svg" width="32%" alt="Hiraya" /></a>
-<a href="https://github.com/helidastar/PalengKart-Console"><img src="https://raw.githubusercontent.com/helidastar/helidastar/output/project-palengkart-console.svg" width="32%" alt="PalengKart" /></a>
+<img src="https://streak-stats.demolab.com?user=helidastar&background=0c1433&border=22346b&stroke=22346b&ring=ff8fc8&fire=ff8fc8&currStreakNum=eef2ff&currStreakLabel=ff8fc8&sideNums=eef2ff&sideLabels=b8a9ff&dates=8a97c4&date_format=M%20j" alt="github streak" />
 
 <br><br>
 
-<a href="mailto:chrdy.4u@gmail.com"><img src="https://img.shields.io/badge/say%20hi-16275A?style=flat-square&logo=gmail&logoColor=FF8FC8" alt="email me" /></a>
-<img src="https://komarev.com/ghpvc/?username=helidastar&label=visitors&color=16275a&style=flat-square" alt="profile views" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helidastar/helidastar/output/snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/helidastar/helidastar/output/snake.svg" alt="contribution snake" />
+</picture>
 
 </div>
+
+<br>
+
+say hi: chrdy.4u@gmail.com &nbsp;·&nbsp; <img src="https://komarev.com/ghpvc/?username=helidastar&label=visitors&color=16275a&style=flat-square" alt="profile views" align="center" />

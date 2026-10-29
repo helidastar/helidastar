@@ -1,4 +1,4 @@
-name: night sky dashboard
+name: contribution snake
 
 on:
   schedule:
@@ -15,14 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
+      - uses: Platane/snk@v3
         with:
-          node-version: 20
-
-      - name: draw the sky
-        run: mkdir -p dist && node .github/scripts/dashboard.js ${{ github.repository_owner }} dist/dashboard.svg
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=#ff6fa8&color_dots=#ebedf0,#c9d6ff,#8fa8ff,#b8a9ff,#ff8fc8
+            dist/snake-dark.svg?color_snake=#ff8fc8&color_dots=#16275a,#4f74c8,#8fa8ff,#b8a9ff,#ff8fc8
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
