@@ -21,7 +21,23 @@ i usually start in figma, then build it in next.js. when a project needs to move
 **what i use**
 
 <p>
-  <img src="https://skillicons.dev/icons?i=figma,ts,js,react,nextjs,tailwind,vite,supabase,postgres,sqlite,prisma,python,cpp,cs,dotnet,arduino&theme=dark&perline=8" alt="figma, typescript, javascript, react, next.js, tailwind, vite, supabase, postgres, sqlite, prisma, python, c++, c#, .net, arduino" />
+  <a href="https://www.figma.com"><img src="https://skillicons.dev/icons?i=figma&theme=dark" width="44" alt="Figma" title="Figma" /></a>
+  <a href="https://www.typescriptlang.org"><img src="https://skillicons.dev/icons?i=ts&theme=dark" width="44" alt="TypeScript" title="TypeScript" /></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=js&theme=dark" width="44" alt="JavaScript" title="JavaScript" /></a>
+  <a href="https://react.dev"><img src="https://skillicons.dev/icons?i=react&theme=dark" width="44" alt="React" title="React" /></a>
+  <a href="https://nextjs.org"><img src="https://skillicons.dev/icons?i=nextjs&theme=dark" width="44" alt="Next.js" title="Next.js" /></a>
+  <a href="https://tailwindcss.com"><img src="https://skillicons.dev/icons?i=tailwind&theme=dark" width="44" alt="Tailwind CSS" title="Tailwind CSS" /></a>
+  <a href="https://vite.dev"><img src="https://skillicons.dev/icons?i=vite&theme=dark" width="44" alt="Vite" title="Vite" /></a>
+  <a href="https://supabase.com"><img src="https://skillicons.dev/icons?i=supabase&theme=dark" width="44" alt="Supabase" title="Supabase" /></a>
+  <br>
+  <a href="https://www.postgresql.org"><img src="https://skillicons.dev/icons?i=postgres&theme=dark" width="44" alt="PostgreSQL" title="PostgreSQL" /></a>
+  <a href="https://www.sqlite.org"><img src="https://skillicons.dev/icons?i=sqlite&theme=dark" width="44" alt="SQLite" title="SQLite" /></a>
+  <a href="https://www.prisma.io"><img src="https://skillicons.dev/icons?i=prisma&theme=dark" width="44" alt="Prisma" title="Prisma" /></a>
+  <a href="https://www.python.org"><img src="https://skillicons.dev/icons?i=python&theme=dark" width="44" alt="Python" title="Python" /></a>
+  <a href="https://isocpp.org"><img src="https://skillicons.dev/icons?i=cpp&theme=dark" width="44" alt="C++" title="C++" /></a>
+  <a href="https://learn.microsoft.com/en-us/dotnet/csharp/"><img src="https://skillicons.dev/icons?i=cs&theme=dark" width="44" alt="C#" title="C#" /></a>
+  <a href="https://dotnet.microsoft.com"><img src="https://skillicons.dev/icons?i=dotnet&theme=dark" width="44" alt=".NET" title=".NET" /></a>
+  <a href="https://www.arduino.cc"><img src="https://skillicons.dev/icons?i=arduino&theme=dark" width="44" alt="Arduino" title="Arduino" /></a>
 </p>
 
 <br>
