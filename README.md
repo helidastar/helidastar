@@ -23,6 +23,13 @@ comp eng student. I mostly do ui/ux and full-stack web stuff, and sometimes hard
 <br><br>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helidastar/helidastar/output/activity-dark.svg" />
+  <img src="https://raw.githubusercontent.com/helidastar/helidastar/output/activity.svg" alt="activity overview" />
+</picture>
+
+<br><br>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helidastar/helidastar/output/snake-dark.svg" />
   <img src="https://raw.githubusercontent.com/helidastar/helidastar/output/snake.svg" alt="contribution snake" />
 </picture>
