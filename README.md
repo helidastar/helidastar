@@ -1,14 +1,38 @@
-<img src="./waving-cat.svg" width="110" align="right" alt="pixel cat waving" />
+<!-- header gif goes here -->
 
-### hi, i'm charity
+## about me
 
-comp eng student. I mostly do ui/ux and full-stack web stuff, and sometimes hardware.
+<table>
+<tr>
+<td width="62%" valign="top">
 
-i usually start in figma, then build it in next.js. when a project needs to move or sense something, it ends up on an esp32.
+```js
+const charity = {
+  course: "BS Computer Engineering",
+  does: ["ui/ux", "full-stack web", "hardware sometimes"],
 
-<br>
+  workflow: "figma -> next.js -> esp32 if it has to move",
 
-**stuff i've built**
+  stack: {
+    design: ["Figma"],
+    web: ["Next.js", "React", "TypeScript", "Tailwind"],
+    data: ["Supabase", "PostgreSQL", "Prisma", "SQLite"],
+    hardware: ["ESP32", "C++"],
+    other: ["Python", "C#"],
+  },
+};
+```
+
+</td>
+<td width="38%" align="center" valign="middle">
+<img src="./waving-cat.svg" width="150" alt="pixel cat waving" />
+<br><br>
+<sub>hi, i'm charity. i build things and then fix the things i built.</sub>
+</td>
+</tr>
+</table>
+
+## stuff i've built
 
 - [SAGIP-AI](https://github.com/helidastar/SAGIP-AI): emergency reports that get ranked by how urgent they are, so the worst ones show up first
 - [GARBO](https://github.com/helidastar/GARBO): waste app for campus. segregate your trash properly, get rewarded
@@ -16,11 +40,16 @@ i usually start in figma, then build it in next.js. when a project needs to move
 - [Hiraya](https://github.com/helidastar/Hiraya): journal + mood tracker with a small community feed
 - [PalengKart](https://github.com/helidastar/PalengKart-Console): inventory and POS for small stores, runs in the console (C#)
 
-<br>
+## say hi
 
-**what i use**
+<p align="center">
+  <a href="mailto:chrdy.4u@gmail.com"><img src="https://img.shields.io/badge/gmail-ff8fc8?style=for-the-badge&logo=gmail&logoColor=16275a" alt="email" /></a>
+  <a href="https://github.com/helidastar"><img src="https://img.shields.io/badge/github-16275a?style=for-the-badge&logo=github&logoColor=white" alt="github" /></a>
+</p>
 
-<p>
+## tech stack
+
+<p align="center">
   <a href="https://www.figma.com"><img src="https://skillicons.dev/icons?i=figma&theme=dark" width="44" alt="Figma" title="Figma" /></a>
   <a href="https://www.typescriptlang.org"><img src="https://skillicons.dev/icons?i=ts&theme=dark" width="44" alt="TypeScript" title="TypeScript" /></a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://skillicons.dev/icons?i=js&theme=dark" width="44" alt="JavaScript" title="JavaScript" /></a>
@@ -40,18 +69,22 @@ i usually start in figma, then build it in next.js. when a project needs to move
   <a href="https://www.arduino.cc"><img src="https://skillicons.dev/icons?i=arduino&theme=dark" width="44" alt="Arduino" title="Arduino" /></a>
 </p>
 
-<br>
-
-**my github, in numbers**
+## github stuff
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=helidastar&background=0c1433&border=22346b&stroke=22346b&ring=ff8fc8&fire=ff8fc8&currStreakNum=eef2ff&currStreakLabel=ff8fc8&sideNums=eef2ff&sideLabels=b8a9ff&dates=8a97c4&date_format=M%20j" alt="github streak" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=helidastar&theme=tokyonight" width="100%" alt="profile details" />
 </p>
 
 <p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=helidastar&theme=tokyonight" width="49%" alt="top languages by repo" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=helidastar&theme=tokyonight&utcOffset=8" width="49%" alt="commits by hour" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=helidastar&background=1a1b27&border=1a1b27&stroke=38bdae&ring=ff8fc8&fire=ff8fc8&currStreakNum=eef2ff&currStreakLabel=ff8fc8&sideNums=eef2ff&sideLabels=70a5fd&dates=8a97c4&date_format=M%20j" width="49%" alt="github streak" />
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/helidastar/helidastar/output/activity-dark.svg" />
-    <img src="https://raw.githubusercontent.com/helidastar/helidastar/output/activity.svg" width="380" alt="activity overview" />
+    <img src="https://raw.githubusercontent.com/helidastar/helidastar/output/activity.svg" width="40%" alt="activity overview" />
   </picture>
 </p>
 
@@ -62,10 +95,4 @@ i usually start in figma, then build it in next.js. when a project needs to move
   </picture>
 </p>
 
-<br>
-
-**say hi**
-
-<a href="mailto:chrdy.4u@gmail.com"><img src="https://skillicons.dev/icons?i=gmail&theme=dark" width="36" alt="email" /></a>
-<a href="https://github.com/helidastar"><img src="https://skillicons.dev/icons?i=github&theme=dark" width="36" alt="github" /></a>
-&nbsp; <img src="https://komarev.com/ghpvc/?username=helidastar&label=visitors&color=16275a&style=flat-square" alt="profile views" />
+<p align="center"><img src="https://komarev.com/ghpvc/?username=helidastar&label=visitors&color=16275a&style=flat-square" alt="profile views" /></p>
