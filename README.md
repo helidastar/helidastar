@@ -4,7 +4,9 @@
 
 Computer Engineering student. I mostly do UI/UX and full-stack web stuff, and sometimes hardware.
 
-I usually start in figma and stitch, then build it in VS Code. When a project needs to move or automized IRL, help me.
+I usually start in Figma and stitch for idea, then build it in VS Code.
+
+Then as for hardware stuffs, I tried Breadboarding, Arduino UNO, ESP32, and Raspberry Pi.
 
 I touch grass and have life outside, so I might not always commit and do stuffs here UNLESS I have to.
 
