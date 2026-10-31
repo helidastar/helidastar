@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" width="420" height="300">
+<style>text{font:12px -apple-system,'Segoe UI','Helvetica Neue',Arial,sans-serif}</style>
+<rect width="420" height="300" rx="6" fill="none"/>
+<g stroke="#216e39" stroke-width="2" stroke-linecap="round">
+<line x1="210" y1="55" x2="210" y2="245"/>
+<line x1="115" y1="150" x2="305" y2="150"/>
+</g>
+<polygon points="210.0,146.0 214.0,150.0 210.0,178.8 145.1,150.0" fill="#40c463" fill-opacity=".55" stroke="#40c463" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="210.0" cy="146.0" r="3.5" fill="#ffffff" stroke="#216e39" stroke-width="2"/><circle cx="214.0" cy="150.0" r="3.5" fill="#ffffff" stroke="#216e39" stroke-width="2"/><circle cx="210.0" cy="178.8" r="3.5" fill="#ffffff" stroke="#216e39" stroke-width="2"/><circle cx="145.1" cy="150.0" r="3.5" fill="#ffffff" stroke="#216e39" stroke-width="2"/>
+<text x="210" y="29" text-anchor="middle" fill="#57606a"><tspan x="210">1%</tspan><tspan x="210" dy="16">Code review</tspan></text>
+<text x="317" y="146" text-anchor="start" fill="#57606a"><tspan x="317">0%</tspan><tspan x="317" dy="16">Issues</tspan></text>
+<text x="210" y="263" text-anchor="middle" fill="#57606a"><tspan x="210">30%</tspan><tspan x="210" dy="16">Pull requests</tspan></text>
+<text x="103" y="146" text-anchor="end" fill="#57606a"><tspan x="103">68%</tspan><tspan x="103" dy="16">Commits</tspan></text>
+</svg>
